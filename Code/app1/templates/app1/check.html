@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        hr {
+            border: none;
+            height: 5px;
+            background: black;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>{{user_p.name}}</h1>
+        <p><b> <u><span style="color:rgb(17, 0, 255);">{{user_p.email}}</span></u> | {{user_p.phone}} |
+                {{user_p.address}} </b></p>
+        <p> <b> <u><span style="color:rgb(17, 0, 255);">GitHub:</span></u> {{user_p.github_link}} | <u><span
+                        style="color:rgb(17, 0, 255);">LinkedIn:</span></u> {{user_p.linkedIn_link}} </b></p>
+    </div>
+    <hr />
+
+    <h2 style="margin-bottom: -6px"> <u>ABOUT ME</u> </h2>
+    <p class="container">
+        {{user_p.aboutMe}}
+    </p>
+    <hr />
+
+    <h2 style="margin-bottom: -6px"><u>EDUCATION</u></h2>
+    <p style="text-align:left;">
+        <b><u><span style="color:rgb(17, 0, 255);">{{user_p.college}}</span></u> </b>
+        <span style="float:right;">
+            {{user_p.time_college}}
+        </span>
+    </p>
+    <i>{{user_p.degree_college}}</i>
+    <p>CGPA: {{user_p.cgpa_college}}</p>
+
+    <p style="text-align:left;">
+        <b><u><span style="color:rgb(17, 0, 255);">{{user_p.class12}}</span></u></b>
+        <span style="float:right;">
+            {{user_p.time_class12}}
+        </span>
+    </p>
+    <i>Stream: {{user_p.stream_12th}}</i>
+    <p>Score: {{user_p.score_12th}}</p>
+    <hr />
+
+    <h2 style="margin-bottom: -6px"><u>EXPERIENCE</u></h2>
+    <p style="text-align:left;">
+        <b><u><span style="color:rgb(17, 0, 255);">{{user_p.prev_work_company}}</span></u> </b>
+        <span style="float:right;">
+            {{user_p.prev_work_location}}
+        </span>
+    </p>
+    <b><i>{{user_p.prev_work_role}}</i></b>
+    <ul>
+        <li style="text-align:left;">
+            {{user_p.prev_work_description}}
+        </li>
+    </ul>
+
+    <hr />
+    <h2 style="margin-bottom: -6px"><u>PROJECTS</u></h2>
+    <br>
+    <b> <u><span style="color:rgb(17, 0, 255);">{{user_p.proj_title}}</span></u> </b>
+    <p>
+        {{user_p.proj_description}}
+    </p>
+
+    <hr />
+    <h2 style="margin-bottom: -6px"><u>LANGUAGES</u></h2>
+    <p>{{user_p.languages}}</p>
+
+    <hr />
+    <h2 style="margin-bottom: -6px"><u>TOOLS & FRAMEWORK</u></h2>
+    <p>{{user_p.tools_and_framework}}</p>
+</body>
+
+</html>

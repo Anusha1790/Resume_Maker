@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Resume Maker</title>
+  <style>
+    .center {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #33D4FF;
+      color: white;
+    }
+
+    h5 {
+      color: #8033FF;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center" position="sticky">
+    <h1>Resume Maker<h1>
+        <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+
+        <br />
+  </div>
+  <div class="container">
+    <h5><u>Enter your details below to be filled in the resume.</u></h5>
+    <form method="POST">
+           {% csrf_token %}
+      <h6><u>PERSONAL DETAILS:</u></h6>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>Name</label>
+          <input type="text" class="form-control" id="name" , name="name">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label>Email</label>
+          <input type="text" class="form-control" id="email" , name="email">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label>Phone</label>
+          <input type="text" class="form-control" id="phone" , name="phone">
+        </div>
+
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>About Me</label>
+          <input type="text" class="form-control" id="aboutMe" , name="aboutMe">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label>Address</label>
+          <input type="text" class="form-control" id="address" , name="address">
+        </div>
+
+      </div>
+      <br>
+      <h6><u>SOCIAL LINKS:</u></h6>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>GitHub</label>
+          <input type="url" class="form-control" id="github_link" , name="github_link">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label>LinkedIn</label>
+          <input type="url" class="form-control" id="linkedIn_link" , name="linkedIn_link">
+        </div>
+      </div>
+
+      <br>
+      <h6><u>COLLEGE:</u></h6>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label>College Name</label>
+          <input type="text" class="form-control" id="college" , name="college">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>College Degree</label>
+          <input type="text" class="form-control" id="degree_college" , name="degree_college">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>College CGPA</label>
+          <input type="text" class="form-control" id="cgpa_college" , name="cgpa_college">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>College Duration</label>
+          <input type="text" class="form-control" id="time_college" , name="time_college">
+          <br>
+        </div>
+      </div>
+
+
+      <br>
+      <h6><u>HIGHER SECONDARY:</u></h6>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label>12th School Name</label>
+          <input type="text" class="form-control" id="class12" , name="class12">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>12th Score</label>
+          <input type="text" class="form-control" id="score_12th" , name="score_12th">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>Stream</label>
+          <input type="text" class="form-control" id="stream_12th" , name="stream_12th">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>Duration</label>
+          <input type="text" class="form-control" id="time_class12" , name="time_class12">
+        </div>
+      </div>
+
+
+      <br>
+      <h6><u>EXPERIENCE:</u></h6>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label>Company</label>
+          <input type="text" class="form-control" id="prev_work_company" , name="prev_work_company">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>Role</label>
+          <input type="text" class="form-control" id="prev_work_role" , name="prev_work_role">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>Location</label>
+          <input type="text" class="form-control" id="prev_work_location" , name="prev_work_location">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>Description</label>
+          <input type="text" class="form-control" id="prev_work_description" , name="prev_work_description">
+        </div>
+
+      </div>
+
+
+
+
+
+      <br>
+      <h6><u>PROJECTS:</u></h6>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Project Title</label>
+          <input type="text" class="form-control" id="proj_title" , name="proj_title">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label>Project Description</label>
+          <input type="text" class="form-control" id="proj_description" , name="proj_description">
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Languages Used</label>
+          <input type="text" class="form-control" id="languages" , name="languages">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label>Tools & Framework</label>
+          <input type="text" class="form-control" id="tools_and_framework" , name="tools_and_framework">
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Generate Resume</button>
+      <br>
+  </form>
+
+  </div>
+  <br>
+  <hr/>
+  
+  <footer>
+    <p>Made Using Django<br>
+      <a href="https://github.com/Anusha1790">GitHub Link</a>
+    </p>
+  </footer>
+</body>
+
+</html>
